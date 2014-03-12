@@ -1,3 +1,12 @@
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if (minetest.get_modpath("intllib")) then
+  dofile(minetest.get_modpath("intllib").."/intllib.lua")
+  S = intllib.Getter(minetest.get_current_modname())
+else
+  S = function ( s ) return s end
+end
+
 local version = "0.0.1"
 
 minetest.log("action","MOD: mob_shark loading ...")
@@ -37,7 +46,7 @@ shark_prototype = {
 			},
 
 		generic = {
-					description="Shark",
+					description= S("Shark"),
 					base_health=5,
 					kill_result=shark_drop,
 					armor_groups= {
