@@ -1,0 +1,6 @@
+# Translation by Xanthin
+
+Chicken = Huhn
+Rooster = Hahn
+Chick - male = maennliches Kueken
+Chick - female = weibliches Kueken
