@@ -2,5 +2,5 @@
 
 Cow = Kuh
 Steer = Bulle
-Baby Calf female = weibliches Kalb
-Baby Calf male = maennliches Kalb
+Baby Calf female = Kuhkalb
+Baby Calf male = Bullenkalb
