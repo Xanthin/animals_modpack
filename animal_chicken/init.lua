@@ -13,6 +13,16 @@
 --
 -- Contact sapier a t gmx net
 -------------------------------------------------------------------------------
+
+-- Boilerplate to support localized strings if intllib mod is installed.
+local S
+if (minetest.get_modpath("intllib")) then
+  dofile(minetest.get_modpath("intllib").."/intllib.lua")
+  S = intllib.Getter(minetest.get_current_modname())
+else
+  S = function ( s ) return s end
+end
+
 minetest.log("action","MOD: animal_chicken mod loading ...")
 local version = "0.0.21"
 
@@ -51,7 +61,7 @@ chicken_prototype = {
 			},
 	
 		generic = {
-					description="Chicken",
+					description= S("Chicken"),
 					base_health=5,
 					kill_result=chicken_drop,
 					armor_groups= {
@@ -167,7 +177,7 @@ rooster_prototype = {
 			},
 
 		generic = {
-					description="Rooster",
+					description= S("Rooster"),
 					base_health=5,
 					kill_result=chicken_drop,
 					armor_groups= {
@@ -275,7 +285,7 @@ chick_m_prototype = {
 			},
 		
 		generic = {
-				description="Chick - male",
+				description= S("Chick - male"),
 				base_health=5,
 				kill_result="animalmaterials:feather 1",
 				armor_groups= {
@@ -370,7 +380,7 @@ chick_f_prototype = {
 			},
 		
 		generic = {
-				description="Chick - female",
+				description= S("Chick - female"),
 				base_health=5,
 				kill_result="animalmaterials:feather 1",
 				armor_groups= {
