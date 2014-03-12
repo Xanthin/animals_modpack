@@ -1,0 +1,3 @@
+# Translation by Xanthin
+
+Path marker tool = Pfadmarkierer
