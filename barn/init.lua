@@ -90,11 +90,11 @@ minetest.register_craft({
 
 function is_food(name)
 
-	if name == "default:leaves" then
+	if name == "dryplants:hay" then
 		return true
 	end
 
-	if name == "default:junglegrass" then
+	if name == "farming:seed_wheat" then
 		return true
 	end
 
